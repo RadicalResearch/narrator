@@ -4,20 +4,17 @@
 - Record words and share with others
 - Listen to words others have shared
 
-## Development prerequasites ##
-- Node.js and NPM - used for tooling.
-
 ## Project creation log ##
 - `git init` - Create git reop
 - Scaffold Application Using Yeoman
  - `npm install -g generator-aspnet` Install Yeoman
- - create 'src' folder
+ - `mkdir src` - Create 'src' folder
  - `yo aspnet` - Run the aspnet generator
- - DNX Restore packadges
-- Install jspm.io
+ - Run DNX restore to restore packadges
+- [Install jspm](http://developer.telerik.com/featured/choose-es6-modules-today/)
  - `npm install jspm/jspm-cli -g` - global CLI
  - `npm install jspm --save-dev` - local jspm packadge
-- [Configure JSPM](http://odetocode.com/blogs/scott/archive/2015/02/18/using-jspm-with-visual-studio-2015-and-asp-net-5.aspx)
+- [Configure jspm](http://odetocode.com/blogs/scott/archive/2015/02/18/using-jspm-with-visual-studio-2015-and-asp-net-5.aspx)
  - `jspm init` - (choose no transpiler)
 
 
@@ -27,12 +24,9 @@
    <code>
    @powershell -NoProfile -ExecutionPolicy unrestricted -Command "&{$Branch='dev';iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.ps1'))}"
    </code>
- - Install the .NET Execution Environment (DNX)<br>
-    <code>
-    dnvm upgrade -r clr
-    </code>
-- DNX Restore packadges - VSCode dnx command
-- `dnu commands install Microsoft.Dnx.Watcher` Install Dnx.Watcher
+ - `dnvm upgrade -r clr` - Install the .NET Execution Environment (DNX)
+- `dnx restore` - Restore packadges
+- `dnu commands install Microsoft.Dnx.Watcher` - Install Dnx.Watcher
 
 
 
