@@ -14,6 +14,12 @@
  - create 'src' folder
  - `yo aspnet` - Run the aspnet generator
  - DNX Restore packadges
+- Install jspm.io
+ - `npm install jspm/jspm-cli -g` - global CLI
+ - `npm install jspm --save-dev` - local jspm packadge
+- [Configure JSPM](http://odetocode.com/blogs/scott/archive/2015/02/18/using-jspm-with-visual-studio-2015-and-asp-net-5.aspx)
+ - `jspm init` - (choose no transpiler)
+
 
 ## Development environment setup ##
 - [Installing ASP.NET 5](https://docs.asp.net/en/latest/getting-started/installing-on-windows.html#install-asp-net-5-from-the-command-line)
