@@ -2,6 +2,7 @@
 "use strict";
 
 var gulp = require("gulp"),
+  shell = require("gulp-shell"),
   rimraf = require("rimraf"),
   concat = require("gulp-concat"),
   cssmin = require("gulp-cssmin"),
@@ -18,6 +19,8 @@ paths.css = paths.webroot + "css/**/*.css";
 paths.minCss = paths.webroot + "css/**/*.min.css";
 paths.concatJsDest = paths.webroot + "js/site.min.js";
 paths.concatCssDest = paths.webroot + "css/site.min.css";
+
+gulp.task('watch', shell.task(['dnx-watch web']));
 
 gulp.task("clean:js", function(cb) {
   rimraf(paths.concatJsDest, cb);

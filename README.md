@@ -26,6 +26,7 @@
     dnvm upgrade -r clr
     </code>
 - DNX Restore packadges - VSCode dnx command
+- `dnu commands install Microsoft.Dnx.Watcher` Install Dnx.Watcher
 
 
 
