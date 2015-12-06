@@ -6,7 +6,7 @@ var gulp = require("gulp"),
   rimraf = require("rimraf"),
   project = require("./project.json");
 
-var Server = require('karma').Server;
+var karma = require('karma');
 
 var paths = {};
 paths.webroot = "./wwwroot/";
@@ -16,8 +16,18 @@ gulp.task('dnx-watch', shell.task(['dnx-watch web']));
 gulp.task('dnx', shell.task(['dnx web']));
 
 gulp.task("test", function(done){
-   new Server({
-    configFile: __dirname + paths.testConfig + '/karma.conf.js',
-    singleRun: true
-  }, done).start();
+
+  var config = {
+      configFile: __dirname + paths.testConfig + '/karma.conf.js',
+      singleRun: true
+  }
+
+  var server = new karma.Server(
+    config, 
+    function() {
+        done();
+    }
+  )
+  server.start();
+  
 });
