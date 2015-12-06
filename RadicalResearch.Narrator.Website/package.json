@@ -22,7 +22,7 @@
   },
   "jspm": {
     "directories": {
-      "baseURL": "wwwroot"
+      "baseURL": "wwwroot/script"
     },
     "devDependencies": {}
   }

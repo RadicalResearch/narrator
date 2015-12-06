@@ -16,18 +16,23 @@ module.exports = function(config) {
       'karma-chai',
       'karma-phantomjs-launcher'
     ],
-    
-    proxies : {
-        '/Test/': '/base/Test/',
+
+    proxies: {
+      '/script': '/base/wwwroot/script',
+      '/test': '/base/test'
     },
 
     jspm: {
-      config: "wwwroot/config.js",
-      packages: "wwwroot/jspm_packages",
+      config: "wwwroot/script/config.js",
+      packages: "wwwroot/script/jspm_packages",
       loadFiles: [
-        'Test/**/*.spec.js'
+        'test/spec/**/*.spec.js'
       ],
+      serveFiles: [
+        'wwwroot/script/**/*.js'
+      ]
     },
+    
     
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
