@@ -1,8 +1,13 @@
 *.suo
 *.user
+config.json
 project.lock.json
 .vs/
 .vscode/
 bin/
 obj/
 node_modules/
+jspm_packages/
+packages/
+design/
+RadicalResearch.Narrator.Website/wwwroot/css

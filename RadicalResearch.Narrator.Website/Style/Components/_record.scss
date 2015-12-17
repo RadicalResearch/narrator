@@ -1,0 +1,9 @@
+#record {
+    display: none;
+}
+
+.is-record-pending {
+  #record { 
+      display: block; 
+  }
+}

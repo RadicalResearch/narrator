@@ -1,0 +1,14 @@
+#narrator
+{
+  margin: 0 auto;
+  max-width: 512px;
+}
+
+#status{
+}
+
+.is-initialized {
+    #status{
+        display: none;
+    }
+}
