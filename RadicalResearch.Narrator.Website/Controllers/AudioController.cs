@@ -12,7 +12,6 @@
     using Microsoft.WindowsAzure.Storage;
     using Microsoft.WindowsAzure.Storage.Blob;
     using Microsoft.WindowsAzure.Storage.Queue;
-    using Microsoft.WindowsAzure.Storage.Shared.Protocol;
 
     public class AudioController : Controller
     {
@@ -42,10 +41,11 @@
                 blobName = string.Concat(audioPost.Word.ToUpperInvariant(), ".", index);
                 blockBlob = container.GetBlockBlobReference(blobName);
             }
-
+            
             using (var stream = audioPost.File.OpenReadStream())
+            using(var blobStream = await blockBlob.OpenWriteAsync())
             {
-                await blockBlob.UploadFromStreamAsync(stream);
+                await stream.CopyToAsync(blobStream);
             }
 
             // Add transcode message to queue
