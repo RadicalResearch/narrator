@@ -39,6 +39,7 @@
     ],
     "scripts": {
         "prepublish": [
+            "npm run bundle",
             "gulp sass"
         ]
     },

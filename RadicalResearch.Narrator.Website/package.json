@@ -16,6 +16,7 @@
         "rimraf": "2.2.8"
     },
     "scripts": {
+        "bundle": "jspm bundle-sfx src/main wwwroot/src/narrator.js --inject --minify",
         "clean": "gulp clean"
     },
     "jspm": {

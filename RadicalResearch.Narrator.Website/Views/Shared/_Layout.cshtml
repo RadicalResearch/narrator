@@ -5,13 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Narrator.</title>
     <link href='~/css/main.css' rel='stylesheet' type='text/css'>
-    <script src="~/jspm_packages/system.js"></script>
-    <script src="~/config.js"></script>
-    <script>
-      System.import('src/main');
-    </script>
 </head>
 <body>
     @RenderBody()
+    <environment names="Development">
+        <script src="~/jspm_packages/system.js"></script>
+        <script src="~/config.js"></script>
+        <script>
+            System.import('src/main');
+        </script>
+    </environment>
+
+    <environment names="Staging,Production">
+        <script src="~/src/narrator.js"></script>
+    </environment>
 </body>
 </html>
