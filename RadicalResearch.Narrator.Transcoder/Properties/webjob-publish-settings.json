@@ -1,9 +1,9 @@
 ﻿{
-  "$schema": "http://schemastore.org/schemas/json/webjob-publish-settings.json",
-  "webJobName": "radicalresearch-narrator-transcoder",
-  "startTime": null,
-  "endTime": null,
-  "jobRecurrenceFrequency": null,
-  "interval": null,
-  "runMode": "OnDemand"
+    "$schema": "http://schemastore.org/schemas/json/webjob-publish-settings.json",
+    "webJobName": "radicalresearch-narrator-transcoder",
+    "startTime": null,
+    "endTime": null,
+    "jobRecurrenceFrequency": null,
+    "interval": null,
+    "runMode": "Continuous"
 }

@@ -105,7 +105,6 @@
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\narrator - Web Deploy.pubxml" />
     <None Include="Properties\webjob-publish-settings.json" />
-    <None Include="webjob-publish-settings.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Lib\lame.exe">
