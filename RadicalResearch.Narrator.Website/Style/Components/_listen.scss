@@ -1,7 +1,20 @@
 #listen {
   color: $color-blue-1-lightest;
+  letter-spacing: 0.03125em;
 }
 
-.read {
-    color: #D00;
+.word {
+    transition: color linear 500ms;
+
+    &.recorded {
+        color: $color-text-base;
+    }
+    
+    &.reading {
+        color: #055;
+    }
+    
+    &.recording {
+        color: #D00;
+    }
 }

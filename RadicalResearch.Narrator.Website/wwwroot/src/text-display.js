@@ -36,7 +36,7 @@ TextDisplay.prototype.update = function update() {
     for (var i = 0; i < elements.length; i++) {
         let element = elements[i];
         let word = element.getAttribute('data-word');
-        element.classList.toggle('read', this.words.contains(word));
+        element.classList.toggle('recorded', this.words.contains(word));
     }
 };
 
